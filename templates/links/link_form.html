@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block meta_title %}New Link{% endblock %}
+{% block title %}New Link{% endblock %}
+
+{% load mezzanine_tags i18n staticfiles %}
+
+
+{% block main %}
+{% errors_for form %}
+<form method="post">
+    <fieldset>{% fields_for form %}</fieldset>
+    <div class="actions">
+        <input class="btn btn-warning btn-large" type="submit" value="Submit New Link">
+    </div>
+</form>
+
+<link rel="stylesheet" href="{% static "mezzanine/tinymce/tinymce.css" %}">
+{% endblock %}
+
+{% block extra_head %}
+<script>
+ {% url "displayable_links_js" as link_list_url %}
+ {% url "fb_browse" as fb_browse_url %}
+ {% url "static_proxy" as static_proxy_url %}
+ {% get_current_language as LANGUAGE_CODE %}
+ window.__filebrowser_url = '{{ fb_browse_url }}';
+ window.__link_list_url = '{{ link_list_url }}';
+ window.__toolbar_html = '{{ toolbar|escapejs }}';
+ window.__static_proxy = '{{ static_proxy_url }}';
+ window.__language_code = '{{ LANGUAGE_CODE }}';
+ window.__tinymce_css = '{% static "mezzanine/css/tinymce.css" %}';
+</script>
+<script src="{% static "mezzanine/tinymce/tinymce.min.js" %}"></script>
+<script src="{% static "mezzanine/tinymce/jquery.tinymce.min.js" %}"></script>
+<script src="{% static "mezzanine/js/tinymce_setup.js" %}"></script>
+
+{% endblock %}
