@@ -7,18 +7,19 @@ from django.utils.translation import ugettext_lazy as _
 from mezzanine.core.forms import TinyMceWidget
 from mezzanine.generic.forms import ThreadedCommentForm
 
+
 from drum.links.models import Link
 
 
-BaseLinkForm = modelform_factory(Link, fields=["title", "link", "text"], widgets={"text": TinyMceWidget})
+BaseLinkForm = modelform_factory(Link, fields=["title", "link", "content"], widgets={"content": TinyMceWidget})
 
 
 class LinkForm(BaseLinkForm):
 
     def clean(self):
         link = self.cleaned_data.get("link", None)
-        text = self.cleaned_data.get("text", None)
-        if not link and not text:
+        content = self.cleaned_data.get("content", None)
+        if not link and not content:
             raise ValidationError("Either a link or description is required")
         return self.cleaned_data
 
@@ -30,4 +31,4 @@ class ArtnewsCommentForm(ThreadedCommentForm):
                              help_text=_("required (not published)"), widget=forms.HiddenInput)
     url = forms.URLField(label=_("Website"), help_text=_("optional"),
                          required=False,widget=forms.HiddenInput)
-
+    

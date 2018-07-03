@@ -6,7 +6,7 @@ from drum.links.models import Link
 
 links_fieldsets = list(deepcopy(LinkAdmin.fieldsets))
 fields = list(links_fieldsets[0][1]["fields"])
-fields.insert(-2,"text")
+fields.insert(-2,"content")#"text")
 links_fieldsets[0][1]["fields"] = fields
 
 class ArtNewsLinkAdmin(LinkAdmin):

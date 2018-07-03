@@ -59,13 +59,13 @@ ADMIN_MENU_ORDER = (
 EXTRA_MODEL_FIELDS = (
     (
         # Dotted path to field.
-        "drum.links.models.Link.text",
+        "drum.links.models.Link.content",
         # Dotted path to field class.
         "mezzanine.core.fields.RichTextField",
         # Positional args for field class.
-        (_("Text"),),
+        (_("Content"),),
         # Keyword args for field class.
-        {"max_length": True, "null": True, "blank": True},
+        {"max_length": 18882, "null": True, "blank": True},
     ),
 #     (
 #         # Dotted path to field.
@@ -321,7 +321,7 @@ OPTIONAL_APPS = (
 
 # Drum-specific Mezzanine settings
 ACCOUNTS_PROFILE_MODEL = "links.Profile"
-SITE_TITLE = "Drum"
+SITE_TITLE = "ARTFEED"
 RATINGS_RANGE = (-1, 1)
 RATINGS_ACCOUNT_REQUIRED = True
 COMMENTS_ACCOUNT_REQUIRED = True

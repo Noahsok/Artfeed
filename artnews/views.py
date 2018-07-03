@@ -1,5 +1,9 @@
 from datetime import timedelta, datetime
 
+from django.contrib.messages import error
+
+from django.shortcuts import get_object_or_404, redirect
+
 from django.conf import settings
 from django.views.generic import CreateView
 
@@ -21,6 +25,10 @@ class LinkCreate(CreateView):
     model = Link
 
     def form_valid(self, form):
+        if form.instance.link and form.instance.content:
+            error(self.request, "Pick one option link or text")
+            return redirect(LinkCreate)
+
         hours = getattr(settings, "ALLOWED_DUPLICATE_LINK_HOURS", None)
         if hours and form.instance.link:
             lookup = {

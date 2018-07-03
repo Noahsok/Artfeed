@@ -1,0 +1,25 @@
+* Notes:
+** when post link name and email should be pre- poluated bc to post the user must be a member of the community
+** Maybe limit image size in tiny mce
+** make link and text either or not both
+** make  name and email not visable on comment form page (finished)
+
+** how to make voting more inticing. 
+** idea: clicking on link will redirect user 
+** "Artnews" saves link and next time user goes on AN they get asked what they think about link
+** Reading history
+** Comment history
+** Link history
+** Favorite
+
+** allow down votes or don't allow down votes
+
+** 
+valid = map(str, settings.RATINGS_RANGE)
+        if str(self.value) not in valid:
+            raise ValueError("Invalid rating. %s is not in %s" % (self.value,
+                ", ".join(valid)))
+
+        super(Rating, self).save(*args, **kwargs)
+
+
