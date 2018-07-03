@@ -3,5 +3,6 @@
 *.db
 .DS_Store
 .coverage
+.vagrant
 local_settings.py
 /static
