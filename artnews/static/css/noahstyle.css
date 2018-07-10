@@ -57,4 +57,73 @@ a {
     background: #ffc1a0;
 }
 
+fieldset {
+    padding: 10px 450px;
+    margin-top: 20px;
+    border: 0;
+}
+
+.close {
+    color: #ffc19f;
+    text-shadow: none;
+    opacity: 100;
+    font-size: 33px;
+}
+
+a {
+    color: #5461ff;
+    text-decoration: none;
+}
+
+.btn.btn-primary {
+    background-color: #5461ff;
+}
+
+/* button for submit page */
+.btn.btn-warning {
+    background-color: #5461ff;
+}
+
+.alert-info {
+    color: #ffc19f;
+    background-color: #5461ff;
+    border-color: #ffc19f;
+}
+
+.alert {
+    text-shadow: none;
+    border: 3px solid #ffc19f;
+}
+
+input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
+    border-color: #ef874d;
+}
+
+textarea, input[type="text"], input[type="password"],
+input[type="datetime"], input[type="datetime-local"],
+input[type="date"],input[type="month"], input[type="time"],
+input[type="week"], input[type="number"], input[type="email"],
+input[type="url"], input[type="search"],input[type="tel"],
+input[type="color"], .uneditable-input {
+    border: 2px solid #5461ff;
+    font-family: "Roboto", sans-serif;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus,
+input[type="datetime"]:focus, input[type="datetime-local"]:focus,
+input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus,
+input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus,
+input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus,
+input[type="color"]:focus, .uneditable-input:focus {
+    border-color: #5461ff;
+}
+
+
+/* tinymce panel  */
+.mce-panel {
+    border: 1px solid #5461ff !important;
+    background-color: #ffc19f !important;
+    background-image: linear-gradient(to bottom,#ffffff,#ffc19f)!important;
+}
+
 
