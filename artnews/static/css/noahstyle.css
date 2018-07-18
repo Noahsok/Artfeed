@@ -79,10 +79,19 @@ a {
     background-color: #5461ff;
 }
 
+.btn.btn-primary:hover {
+    background-color: #ffc19f;
+}
+
 /* button for submit page */
 .btn.btn-warning {
     background-color: #5461ff;
 }
+
+.btn.btn-warning:hover {
+    background-color: #ffc19f;
+}
+
 
 .alert-info {
     color: #ffc19f;
@@ -124,6 +133,40 @@ input[type="color"]:focus, .uneditable-input:focus {
     border: 1px solid #5461ff !important;
     background-color: #ffc19f !important;
     background-image: linear-gradient(to bottom,#ffffff,#ffc19f)!important;
+}
+
+.pull-left-submit {
+    float: none;
+    margin: 17px;
+}
+
+.pull-right {
+    float: right;
+    margin: -39px auto 0px;
+}
+
+.pull-profile {
+    float: right;
+    margin: -39px -102px;
+}
+
+.navbar .nav > li > a {
+    margin: -48px;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.navbar .nav > li > a:hover {
+    color: #efefef; 
+}
+
+.navbar-inverse .nav > li > a {
+    color: #5461ff;
+}
+
+a:hover {
+    color: #efefef;
+    text-decoration: none;
 }
 
 

@@ -5,7 +5,7 @@
     <head>
 
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
         <meta name="description" content="{% block meta_description %}{% endblock %}">
         <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
@@ -59,7 +59,7 @@
                     <!-- <li{% if tag_list in request.path %} class="active"{% endif %}><a href="{{ tag_list }}">Tags</a></li> -->
                     <!-- </ul> -->
                     <!-- <div class="nav-collapse"> -->
-                        <div class="pull-right">
+                        <div class="pull-left-submit">
                             <a href="{% url "link_create" %}">Submit</a>
                         </div>
                         <!-- <ul class="nav pull-right"><li class="divider-vertical"></li></ul> -->
