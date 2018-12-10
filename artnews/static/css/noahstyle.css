@@ -1,25 +1,36 @@
-
 a.brand {
+    text-indent: none;
+    padding:0 !important;
+    #width:30px;
+    overflow:hidden;
+
     background: none;
     background-position: none;
     text-indent: none;
-    margin-left: none; 
-    font-family: 'Oxygen', sans-serif;
+    margin-left: none;
+    font-family: 'Space Mono', regular;
 
-    padding:12px 5px !important;
-    background: #5562ff;
-    color:#ffc19f !important;
+    #padding:12px 5px !important;
+     background: #ffffff ;
+     color:#ffffff !important;
 }
 
-@media (max-width: 600px) {
-    a.brand {text-indent:40px;
-             padding:0 !important;
-             width:30px;
-             overflow:hidden;
-            }}
+a {
+    color: #A0EFDC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #efefef;
+    text-decoration: none;
+}
+
+img {
+    box-shadow: none !important;
+}
 
 body {
-    color: #ffc19f;
+    #color: #fff;
     font: 14px/1.231 'Oxygen', sans-serif;
      }
 
@@ -40,13 +51,7 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
 }
 
 .link-item .arrows {
-    background-color: #ffc19f;
-}
-
-a {
-    
-    color: #ffffff;
-    text-decoration: none;
+    background-color: #ffffff;
 }
 
 .navbar .brand {
@@ -54,7 +59,8 @@ a {
 }
 
 .navbar-inverse .navbar-inner {
-    background: #ffc1a0;
+    -webkit-box-shadow: none;
+    background: #ffffff;
 }
 
 fieldset {
@@ -64,15 +70,10 @@ fieldset {
 }
 
 .close {
-    color: #ffc19f;
+    color: #ffffff;
     text-shadow: none;
     opacity: 100;
     font-size: 33px;
-}
-
-a {
-    color: #5461ff;
-    text-decoration: none;
 }
 
 .btn.btn-primary {
@@ -80,7 +81,7 @@ a {
 }
 
 .btn.btn-primary:hover {
-    background-color: #ffc19f;
+    background-color: #ffffff;
 }
 
 /* button for submit page */
@@ -89,23 +90,23 @@ a {
 }
 
 .btn.btn-warning:hover {
-    background-color: #ffc19f;
+    background-color: #fff;
 }
 
 
 .alert-info {
-    color: #ffc19f;
+    color: #fff;
     background-color: #5461ff;
-    border-color: #ffc19f;
+    border-color: #fff;
 }
 
 .alert {
     text-shadow: none;
-    border: 3px solid #ffc19f;
+    border: 3px solid #fff;
 }
 
 input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
-    border-color: #ef874d;
+    border-color: #fff;
 }
 
 textarea, input[type="text"], input[type="password"],
@@ -131,8 +132,8 @@ input[type="color"]:focus, .uneditable-input:focus {
 /* tinymce panel  */
 .mce-panel {
     border: 1px solid #5461ff !important;
-    background-color: #ffc19f !important;
-    background-image: linear-gradient(to bottom,#ffffff,#ffc19f)!important;
+    background-color: #fff !important;
+    background-image: linear-gradient(to bottom,#ffffff,#fff)!important;
 }
 
 .pull-left-submit {
@@ -164,9 +165,6 @@ input[type="color"]:focus, .uneditable-input:focus {
     color: #5461ff;
 }
 
-a:hover {
-    color: #efefef;
-    text-decoration: none;
-}
+
 
 
