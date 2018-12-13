@@ -6,9 +6,9 @@
     <a href="{% url "logout" %}?next={{ request.path }}"
       >{% trans "Log out" %}</a>
     {% else %}
-    <a href="{% url "login" %}?next={{ request.path }}"
+    <a href="{% url "login" %}" class="btn" type="login-button"?next="{{ request.path }}"
       >{% trans "Log in" %}</a>
-    <a href="{% url "signup" %}?next={{ request.path }}"
+    <a href="{% url "signup" %}" class="btn" type="signup-button"?next={{ request.path }}"
       >{% trans "Sign up" %}</a>
     {% endif %}
 </div>

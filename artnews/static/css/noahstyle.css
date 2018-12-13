@@ -20,8 +20,23 @@ a {
     text-decoration: none;
 }
 
+a.btn {
+    background: none;
+	  padding: 4px 16px !important;
+    color: #000000;
+    font-family: monospace;
+    font-size:16.5;
+    border: 1px solid #A0EFDC;
+
+}
+
+.btn:hover, .btn:focus  {
+    background-color: #fffefe !important;
+    color: #000000;
+}
+
 a:hover {
-    color: #efefef;
+    color: #A0EFDC;
     text-decoration: none;
 }
 
@@ -77,11 +92,11 @@ fieldset {
 }
 
 .btn.btn-primary {
-    background-color: #5461ff;
+    background-color: #a0efdc;
 }
 
 .btn.btn-primary:hover {
-    background-color: #ffffff;
+    background-color: #a0efdc;
 }
 
 /* button for submit page */
@@ -165,6 +180,9 @@ input[type="color"]:focus, .uneditable-input:focus {
     color: #5461ff;
 }
 
+.row {
+    margin-left: 250px;
+}
 
 
 

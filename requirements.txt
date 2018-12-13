@@ -1,2 +1,1 @@
-Mezzanine==4.2.3
 Drum==0.4.0
