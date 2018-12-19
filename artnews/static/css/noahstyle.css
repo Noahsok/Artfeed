@@ -1,3 +1,24 @@
+.span9 {
+    width: 1200px !important;
+    float: none !important;
+    min-height: none !important;
+    margin-left: none !important;
+
+}
+
+
+.forum-list {
+    border: 2px solid #BDD5CF;
+}
+
+.forum-sidebar_join-promt {
+    background-color: #9ABBB3;
+    padding: 14px;
+    border: 2px solid #9ABBB3;
+    border-radius: 3px;
+    font-family: damascus;
+}
+
 a.brand {
     text-indent: none;
     padding:0 !important;
@@ -69,14 +90,6 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
     background-color: #ffffff;
 }
 
-.navbar .brand {
-    font-weight: 800;
-}
-
-.navbar-inverse .navbar-inner {
-    -webkit-box-shadow: none;
-    background: #ffffff;
-}
 
 fieldset {
     padding: 10px 450px;
@@ -180,7 +193,6 @@ input[type="color"]:focus, .uneditable-input:focus {
     color: #5461ff;
 }
 
-.row {
     margin-left: 250px;
 }
 
