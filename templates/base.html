@@ -47,10 +47,7 @@
                     {% endnevercache %}
                 </div>
                 </div>
-            </div>
-            <a href="{% url "link_create" %}">New Post</a>
-        </div>
-
+           
         <div class="container main">
             {% nevercache %}
             {% for message in messages %}
@@ -63,24 +60,24 @@
 
         <div class="container">
             <div class="row">
-                <div class="span3 forum-sidebar">
-                        <section class="forum-sidebar_join-promt">
-                            <p>
-                                We believe
-                                that to be involved in
-                                the greater art context
-                                we must have meaningful,
-                                inspiring conversations
-                                and connections with
-                                contemporaries
-                            </p>
-                            {% nevercache %}
-                            {% include "accounts/includes/sidebar.html" %}
-                        </section>
-                    
+                <div class="span3">
+                    {% if not request.user.is_authenticated %}
+                    {% include "accounts/includes/sidebar.html" %}
+                    {% endif %}
+                </div>
+                <div class="span8 offset3 top-forum-list">
+                    <nav class="forum-list_threads-nav">
+                        <div class="forum-list_filters-wrapper">
+                            <div id="filters1" class="forum-filters">
+                                <a id="filter-top" href="/" class="forum-filters_filter">Top</a>
+                                
+                            </div>
+                        </div>
+                        <a id="post-btn" href="{% url "link_create" %}" class="btn" type="new-post">New Post</a>
+                    </nav>
+                </div>
                 <div class="span8 offset3 forum-list">
                     {% block main %}{% endblock %}
-                </div>
                 </div>
             </div>
         </div>

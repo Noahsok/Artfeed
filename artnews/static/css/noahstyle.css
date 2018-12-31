@@ -3,7 +3,27 @@
     float: none !important;
     min-height: none !important;
     margin-left: none !important;
+}
 
+
+
+@media (min-width: 1200px){
+    .container {
+        height: 100px !important;
+    }
+}
+
+@media (min-width:1200px) {
+    .span3 {
+        width: 200px !important;
+    }
+}
+
+@media (min-width:1200px) {
+    .offset3 {
+        margin-left: 0px !important;
+        margin: 0px 50px !important;
+    }
 }
 
 
@@ -36,10 +56,55 @@ a.brand {
      color:#ffffff !important;
 }
 
-a {
+
+.top-forum-list {
+    border: 2px solid #BDD5CF;
+    border-bottom: 0 none;
+    height: 45px;
+    position:relative;
+
+}
+
+.forum-list_threads-nav {
+    font-size: 17px;
+    font-family: 'Space Mono', regular;
+    margin-top: 1.5%;
+    margin-left: 1%;
+}
+
+.forum-list_filters-wrapper {
+    display: flex;
+    overflow: hidden;
+}
+
+.forum-list_filters-wrapper .top-forum-list {
+    align-items:center;
+    height: 45px;
+    display: none;
+    position: relative;
+    align-self: stretch;
+}
+
+#filter-top {
+    text-decoration: none;
+    color: #000000;
+    margin-top: 5%;
+
+}
+
+#post-btn, .post-nav {
+    font-family: 'Space Mono', regular;
+    color: #000000;
+    float: right;
+    margin-right: 1%;
+    margin-top: -3%;
+    padding-right: 10px;
+}
+
+/* a {
     color: #A0EFDC;
     text-decoration: none;
-}
+} */
 
 a.btn {
     background: none;
@@ -50,6 +115,9 @@ a.btn {
     border: 1px solid #A0EFDC;
 
 }
+
+
+
 
 .btn:hover, .btn:focus  {
     background-color: #fffefe !important;
