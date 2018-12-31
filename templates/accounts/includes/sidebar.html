@@ -1,7 +1,17 @@
-{% load i18n mezzanine_tags drum_tags %}
-
-<div class="signup"> 
-    {% if request.user.is_authenticated %}
-    #find out how to do a not
-    #if with a not
-
+<div class="join-us"> 
+    <div class="forum-sidebar">
+        <section class="forum-sidebar_join-promt join-us_btn">
+            <p>
+                We believe
+                that to be involved in
+                the greater art context
+                we must have meaningful,
+                inspiring conversations
+                and connections with
+                contemporaries.
+            </p>
+                <a href="{% url "signup" %}" class="btn" type="join-us">Join Us</a>
+        </section>
+    </div>
+        
+    </div>
