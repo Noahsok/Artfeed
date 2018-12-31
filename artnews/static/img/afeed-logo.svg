@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="59px" viewBox="0 0 64 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="a-feed">
+            <g id="logo?">
+                <g>
+                    <path d="M21.3963422,12.8931425 L21.3963422,26.1199722" id="Line" stroke="#A0EFDC" stroke-width="1.45000005" stroke-linecap="square" transform="translate(21.396342, 19.506557) rotate(90.000000) translate(-21.396342, -19.506557) "></path>
+                    <path d="M20.9172547,27.3771085 L36.6583569,27.3771085" id="Line-2" stroke="#A0EFDC" stroke-width="1.45000005" stroke-linecap="square" transform="translate(28.787806, 27.377108) rotate(90.000000) translate(-28.787806, -27.377108) "></path>
+                    <text id="a" font-family="Times-Roman, Times" font-size="27.5500009" font-weight="normal" fill="#000000">
+                        <tspan x="0" y="27.3571365">a</tspan>
+                    </text>
+                    <text id="feed" font-family="Times-Roman, Times" font-size="27.5500009" font-weight="normal" fill="#000000">
+                        <tspan x="12.4487809" y="51.7462542">feed</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
