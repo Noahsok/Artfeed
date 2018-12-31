@@ -3,8 +3,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth.decorators import login_required
 
-from artnews.views import LinkCreate
-
+from drum.links.views import LinkList, LinkCreate, LinkDetail, CommentList, TagList
 
 admin.autodiscover()
 
