@@ -101,6 +101,10 @@ a.brand {
     padding-right: 10px;
 }
 
+#post-btn:hover {
+    background-color: #9ABBB3 !important;
+}
+
 /* a {
     color: #A0EFDC;
     text-decoration: none;
