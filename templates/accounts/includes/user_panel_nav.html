@@ -3,12 +3,12 @@
 
 <div class="pull-right">
     {% if request.user.is_authenticated %}
-    <a href="{% url "logout" %}?next={{ request.path }}"
+    <a id="logout-btn" href="{% url "logout" %}" class="btn" type="logout-button"?next={{ request.path }}"
       >{% trans "Log out" %}</a>
     {% else %}
-    <a href="{% url "login" %}" class="btn" type="login-button"?next="{{ request.path }}"
+    <a id="login-btn" href="{% url "login" %}" class="btn" type="login-button"?next="{{ request.path }}"
       >{% trans "Log in" %}</a>
-    <a href="{% url "signup" %}" class="btn" type="signup-button"?next={{ request.path }}"
+    <a id="signup-btn" href="{% url "signup" %}" class="btn" type="signup-button"?next={{ request.path }}"
       >{% trans "Sign up" %}</a>
     {% endif %}
 </div>
@@ -17,6 +17,6 @@
 <div class="pull-profile">
     {% url "profile" request.user.username as profile_url %}
     {% if not profile_url %}{% url "profile_update" as profile_url %}{% endif %}
-    <li><a href="{{ profile_url }}">{{ request.user|get_profile }}</a></li>
+    <a id="profile-url-btn" href="{{ profile_url }}" class="btn" type="profile-button">{{ request.user|get_profile }}</a>
 </div>
 {% endif %}
