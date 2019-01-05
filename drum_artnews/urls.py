@@ -13,6 +13,9 @@ urlpatterns = [
     url("^link/create/$",
         login_required(LinkCreate.as_view()),
         name="link_create"),
+    url("^newest/$",
+        LinkList.as_view(), {"by_score": False},
+        name="link_list_latest"),
     url("^", include("drum.links.urls")),
     url("^", include("mezzanine.urls")),
 ]
