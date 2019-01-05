@@ -29,6 +29,8 @@
 
 .forum-list {
     border: 2px solid #BDD5CF;
+    #margin-left:20em !important;
+    position: relative;
 }
 
 .forum-sidebar_join-promt {
@@ -37,6 +39,7 @@
     border: 2px solid #9ABBB3;
     border-radius: 3px;
     font-family: damascus;
+    font-size: 16px;
 }
 
 a.brand {
@@ -61,6 +64,7 @@ a.brand {
     border: 2px solid #BDD5CF;
     border-bottom: 0 none;
     height: 45px;
+    width: 54.9em !important;
     position:relative;
 
 }
@@ -89,7 +93,13 @@ a.brand {
     text-decoration: none;
     color: #000000;
     margin-top: 5%;
+}
 
+#filter-newest, #filter-week,
+#filter-Month {
+    text-decoration: none;
+    color: #000000;
+    
 }
 
 #post-btn, .post-nav {
@@ -97,7 +107,7 @@ a.brand {
     color: #000000;
     float: right;
     margin-right: 1%;
-    margin-top: -3%;
+    margin-top: -3.3%;
     padding-right: 10px;
 }
 
@@ -105,23 +115,41 @@ a.brand {
     background-color: #9ABBB3 !important;
 }
 
-/* a {
+#login-btn:hover {
+    background-color: #9ABBB3 !important;
+}
+
+#signup-btn:hover {
+    background-color: #9ABBB3 !important;
+}
+
+#logout-btn:hover {
+    background-color: #9ABBB3 !important;
+}
+
+a {
     color: #A0EFDC;
     text-decoration: none;
-} */
+}
 
 a.btn {
     background: none;
 	  padding: 4px 16px !important;
+    margin-right: .5em;
     color: #000000;
     font-family: monospace;
     font-size:16.5;
-    border: 1px solid #A0EFDC;
+    border: 1.5px solid #A0EFDC;
 
 }
 
+#logout-btn {
+    margin-right: 6em; 
+}
 
-
+#profile-url-btn {
+    margin-right: 4em;
+}
 
 .btn:hover, .btn:focus  {
     background-color: #fffefe !important;
@@ -150,18 +178,82 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
     border:0 solid #c8967b38;
 }
 
-.score, .arrows {
-    opacity:100;
+/* Rating widget with up/down arrows */
+.rating {float:left; margin-top:-15px;}
+.rating form {display:none !important;}
+.rating i {
+    display:block !important;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
+.arrows {float:left; margin-top:-5px;}
+.score, .arrows {opacity: none;}
+.arrows a:hover i {background-color:#1abc9c; background-image:url("../img/glyphicons-halflings-white.png");}
 
+/* Link items in a list */
+.link-item h2 {
+    line-height:30px;
+    margin:0;
+    font-size: 17px;
+}
+.link-item .rating, .link-detail {float:left;}
 .link-item .rating {
-    padding: 3px;
+    background-color: none;
+    padding: 10px;
+    margin: -6px -13px 0 18px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width:75px;
+    text-align:center;
 }
-
 .link-item .arrows {
-    background-color: #ffffff;
+    margin: 0 10px 0 0;
+    background-color: none;
+    padding: 7px;
+    display: block;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
+#arrow-up {
+    color: #A0EFDC;
+}
+
+.svg-inline--fa.fa-w-10 {
+    font-size: 2.5em;
+    color: #9df0dc;
+}
+
+.link-item .score {
+  font-size: 20px;
+  line-height: 85px;
+  margin-left: -4.2em;
+}
+
+.link-detail {
+    width:80%;
+    font-size: 14px;
+    margin-left: -13;
+}
+
+@media (max-width: 600px) {.link-detail {width:60%;}}
+.link-detail a.profile, .link-detail a.comments {color:#999;}
+.link-detail a.profile:visited, .link-detail a.comments:visited {color:#bbb;}
+
+/* Link listing, details */
+.link-item, .comment-item {
+    margin-top: 11.5px;
+    margin-left: -2px;
+    border: 2px solid #bbd5cf;
+    width: 54.9em;
+    padding: 15px 0;
+}
+.link-view .rating i {float:left; margin:8px 0 0 -4px;}
+.link-view .description {margin:20px 0;}
+.link-meta .rating {margin:0 5px 0 0 !important;}
 
 fieldset {
     padding: 10px 450px;
@@ -170,7 +262,7 @@ fieldset {
 }
 
 .close {
-    color: #ffffff;
+    color: #bad5cf;
     text-shadow: none;
     opacity: 100;
     font-size: 33px;
@@ -195,14 +287,26 @@ fieldset {
 
 
 .alert-info {
-    color: #fff;
-    background-color: #5461ff;
-    border-color: #fff;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #9df0dc !important;
+    margin: 0 32em;
+    margin-top: 3em;
+    font-family: monospace;
 }
 
 .alert {
     text-shadow: none;
-    border: 3px solid #fff;
+    border: 2px solid #99bbb3;
+}
+
+.alert-danger, .alert-error {
+    color: #b94a48;
+    background-color: #ffffff;
+    font-family: monospace;
+    font-size: 13px;
+    margin: 0 21em;
+    margin-top: 3em;
 }
 
 input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {

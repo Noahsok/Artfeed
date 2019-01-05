@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="{{ STATIC_URL }}css/flat-ui.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}css/noahstyle.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap2-responsive.css">
- 
+
 
         {% endcompress %}
 
@@ -30,6 +30,7 @@
         <script src="{{ STATIC_URL }}js/bootstrap2-extras.js"></script>
         <script src="{{ STATIC_URL }}js/drum.js"></script>
         <script src="{{ STATIC_URL }}js/jquery.pjax.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
         {% endcompress %}
 
         {% block extra_head %}{% endblock %}
@@ -40,7 +41,7 @@
         <div class="container">
             <div class="row">
                 <div class="span3">
-                    <a class="brand" href="/"><img src="../static/img/afeed-logo.svg"> </a>
+                    <a class="brand" href="/"><img src="/static/img/afeed-logo.svg"> </a>
                 <div class="span9">
                     {% nevercache %}
                     {% include "accounts/includes/user_panel_nav.html" %}
@@ -63,20 +64,22 @@
                 <div class="span3">
                     {% if not request.user.is_authenticated %}
                     {% include "accounts/includes/sidebar.html" %}
+                    {% else %}
                     {% endif %}
+
                 </div>
-                <div class="span8 offset3 top-forum-list">
+                <div class="span8 offset3 top-forum-list forum-list">
                     <nav class="forum-list_threads-nav">
                         <div class="forum-list_filters-wrapper">
                             <div id="filters1" class="forum-filters">
                                 <a id="filter-top" href="/" class="forum-filters_filter">Top</a>
-                                
+                                {% if request.path == link_list_latest %} class="active"{% endif %}<a id="filter-newest" href="{{ link_list_lastest }}" class="forum-filters_filter">Newest</a>
+                                <a id="filter-week" href="/" class="forum-filters_filter">Week</a>
+                                <a id="filter-Month" href="/" class="forum-filters_filter">Month</a>
                             </div>
                         </div>
                         <a id="post-btn" href="{% url "link_create" %}" class="btn" type="new-post">New Post</a>
                     </nav>
-                </div>
-                <div class="span8 offset3 forum-list">
                     {% block main %}{% endblock %}
                 </div>
             </div>
