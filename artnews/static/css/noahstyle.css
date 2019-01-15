@@ -59,29 +59,26 @@ a.brand {
      color:#ffffff !important;
 }
 
+/* forum navbar */
 
-.top-forum-list {
+#forum-nav, .top-forum-list, .forum-list_threads-nav, .forum-list_filters-wrapper,
+.top-forms-list
+ {
+ 
     border: 2px solid #BDD5CF;
     border-bottom: 0 none;
     height: 45px;
     width: 54.9em !important;
     position:relative;
 
-}
-
-.forum-list_threads-nav {
     font-size: 17px;
     font-family: 'Space Mono', regular;
     margin-top: 1.5%;
     margin-left: 1%;
-}
 
-.forum-list_filters-wrapper {
     display: flex;
     overflow: hidden;
-}
 
-.forum-list_filters-wrapper .top-forum-list {
     align-items:center;
     height: 45px;
     display: none;
@@ -261,6 +258,53 @@ fieldset {
     border: 0;
 }
 
+/* login css */
+
+#login-account {
+    font-family: 'Space Mono', regular !important;
+    font-size: 12px;
+    margin-left: 26em;
+    margin-top: -4em;
+
+}
+
+#join-community {
+    color: #000;
+    text-decoration-line: underline;
+}
+
+p#reset-password, #reset-pass {
+    color: #000;
+    font-family: 'Space Mono', regular !important;
+}
+
+#reset-pass {
+    text-decoration-line: underline;
+}
+
+#reset-pass:hover {
+    color: #A0EFDC;
+}
+
+.info-box {
+    background-color: #bbd5cf;
+    margin-top: -23em;
+    margin-left: .62em;
+    margin-right: 36.7em;
+    padding: 2em; 
+}
+
+legend {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-family: 'Mono Space',regular !important;ext-align: -webkit-center !important;
+    background-color: #99bbb3 !important;
+    margin-left: -21em !important;
+}
+
 .close {
     color: #bad5cf;
     text-shadow: none;
@@ -269,7 +313,12 @@ fieldset {
 }
 
 .btn.btn-primary {
-    background-color: #a0efdc;
+    border: 2px solid #a0efdc;
+    background-color: #fff;
+    font-family: monospace;
+    color: #000000;
+
+
 }
 
 .btn.btn-primary:hover {
@@ -311,6 +360,7 @@ fieldset {
 
 input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
     border-color: #fff;
+    box-shadow: 0 0 20px #99bbb3;
 }
 
 textarea, input[type="text"], input[type="password"],
@@ -319,7 +369,7 @@ input[type="date"],input[type="month"], input[type="time"],
 input[type="week"], input[type="number"], input[type="email"],
 input[type="url"], input[type="search"],input[type="tel"],
 input[type="color"], .uneditable-input {
-    border: 2px solid #5461ff;
+    border: 2px solid #9df0dc;
     font-family: "Roboto", sans-serif;
 }
 
@@ -329,7 +379,12 @@ input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus,
 input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus,
 input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus,
 input[type="color"]:focus, .uneditable-input:focus {
-    border-color: #5461ff;
+    border-color: #9df0dc;
+}
+
+.form-actions {
+    background-color: #ffffff !important;
+    border-top: none !important;
 }
 
 

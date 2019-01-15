@@ -64,24 +64,16 @@
                 <div class="span3">
                     {% if not request.user.is_authenticated %}
                     {% include "accounts/includes/sidebar.html" %}
-                    {% else %}
                     {% endif %}
 
                 </div>
-                <div class="span8 offset3 top-forum-list forum-list">
-                    <nav class="forum-list_threads-nav">
-                        <div class="forum-list_filters-wrapper">
-                            <div id="filters1" class="forum-filters">
-                                <a id="filter-top" href="/" class="forum-filters_filter">Top</a>
-                                {% if request.path == link_list_latest %} class="active"{% endif %}<a id="filter-newest" href="{{ link_list_lastest }}" class="forum-filters_filter">Newest</a>
-                                <a id="filter-week" href="/" class="forum-filters_filter">Week</a>
-                                <a id="filter-Month" href="/" class="forum-filters_filter">Month</a>
-                            </div>
-                        </div>
-                        <a id="post-btn" href="{% url "link_create" %}" class="btn" type="new-post">New Post</a>
-                    </nav>
-                    {% block main %}{% endblock %}
+                <div id="forum-nav">
+                {% block forumNav %}{% endblock %}
                 </div>
+                {% block main %}
+                
+                {% endblock %}
+
             </div>
         </div>
         
