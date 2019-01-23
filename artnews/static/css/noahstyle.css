@@ -28,7 +28,7 @@
 
 
 .forum-list {
-    border: 2px solid #BDD5CF;
+    border-bottom: 2px solid #BDD5CF;
     #margin-left:20em !important;
     position: relative;
 }
@@ -61,9 +61,7 @@ a.brand {
 
 /* forum navbar */
 
-#forum-nav, .top-forum-list, .forum-list_threads-nav, .forum-list_filters-wrapper,
-.top-forms-list
- {
+#forum-Nav, .top-forum-list, {
  
     border: 2px solid #BDD5CF;
     border-bottom: 0 none;
@@ -71,19 +69,24 @@ a.brand {
     width: 54.9em !important;
     position:relative;
 
+    align-items:center;
+    height: 45px;
+    align-self: stretch;
+}
+
+.forum-list_threads-nav {
     font-size: 17px;
     font-family: 'Space Mono', regular;
     margin-top: 1.5%;
     margin-left: 1%;
+}
 
+.forum-list_filters-wrapper {
     display: flex;
     overflow: hidden;
+}
 
-    align-items:center;
-    height: 45px;
-    display: none;
-    position: relative;
-    align-self: stretch;
+.forum-filters {
 }
 
 #filter-top {
@@ -99,12 +102,13 @@ a.brand {
     
 }
 
-#post-btn, .post-nav {
+#post-btn {
     font-family: 'Space Mono', regular;
     color: #000000;
-    float: right;
+    float: none;
     margin-right: 1%;
-    margin-top: -3.3%;
+    margin-top: -4.3%;
+    margin-left: 81%;
     padding-right: 10px;
 }
 
@@ -130,18 +134,29 @@ a {
 }
 
 a.btn {
-    background: none;
+    background: none !important;
 	  padding: 4px 16px !important;
     margin-right: .5em;
     color: #000000;
     font-family: monospace;
     font-size:16.5;
-    border: 1.5px solid #A0EFDC;
+    border: 1.5px solid #A0EFDC !important;
 
 }
 
+input#post-btn {
+    background: none !important;
+	  padding: 4px 16px !important;
+    margin-right: .5em;
+    color: #000000;
+    font-family: monospace;
+    font-size:16.5;
+    border: 1.5px solid #A0EFDC !important;
+    margin-right: 1em;
+}
+
 #logout-btn {
-    margin-right: 6em; 
+    margin-right: 1em; 
 }
 
 #profile-url-btn {
@@ -253,8 +268,8 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
 .link-meta .rating {margin:0 5px 0 0 !important;}
 
 fieldset {
-    padding: 10px 450px;
-    margin-top: 20px;
+    padding: 0em 14em;
+    margin-top: 0em;
     border: 0;
 }
 
@@ -263,8 +278,8 @@ fieldset {
 #login-account {
     font-family: 'Space Mono', regular !important;
     font-size: 12px;
-    margin-left: 26em;
-    margin-top: -4em;
+    margin-left: 69em;
+    margin-top: -27em;
 
 }
 
@@ -272,19 +287,30 @@ fieldset {
     color: #000;
     text-decoration-line: underline;
 }
-
-p#reset-password, #reset-pass {
+/* login reset & join text */ 
+#reset-password {
     color: #000;
     font-family: 'Space Mono', regular !important;
+    font-size: 13px;
+    padding-left: 64em;
+    margin-left: 0em;
+    margin-top: 3em;
 }
 
-#reset-pass {
+#reset{
     text-decoration-line: underline;
+    color: #000000;
+} 
+
+#password {
+    color: #000000;
 }
 
 #reset-pass:hover {
     color: #A0EFDC;
 }
+
+/* account_forms.html */
 
 .info-box {
     background-color: #bbd5cf;
@@ -296,13 +322,15 @@ p#reset-password, #reset-pass {
 
 legend {
     display: block;
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 20px;
+    width: 30%;
+    padding: 0.3em;
+    margin-bottom: 1em;
     font-size: 21px;
-    font-family: 'Mono Space',regular !important;ext-align: -webkit-center !important;
-    background-color: #99bbb3 !important;
-    margin-left: -21em !important;
+    font-family: 'Mono Space',regular !important;
+    ext-align: -webkit-center !important;
+    border: 1px solid #99bbb3;
+    margin-left: 5.0em !important;
+    text-align: -webkit-center;
 }
 
 .close {
@@ -363,6 +391,10 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
     box-shadow: 0 0 20px #99bbb3;
 }
 
+.form-group, .input_id_username {
+    margin-left: 7em;
+}
+
 textarea, input[type="text"], input[type="password"],
 input[type="datetime"], input[type="datetime-local"],
 input[type="date"],input[type="month"], input[type="time"],
@@ -370,7 +402,8 @@ input[type="week"], input[type="number"], input[type="email"],
 input[type="url"], input[type="search"],input[type="tel"],
 input[type="color"], .uneditable-input {
     border: 2px solid #9df0dc;
-    font-family: "Roboto", sans-serif;
+    font-family: "Mono Space";
+    margin-left: 0em;
 }
 
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus,
@@ -385,6 +418,7 @@ input[type="color"]:focus, .uneditable-input:focus {
 .form-actions {
     background-color: #ffffff !important;
     border-top: none !important;
+    padding: 3em 16em 0em;
 }
 
 
@@ -400,14 +434,13 @@ input[type="color"]:focus, .uneditable-input:focus {
     margin: 17px;
 }
 
-.pull-right {
+.pull-right, pull-profile {
     float: right;
     margin: -39px auto 0px;
-}
+    margin-right: 3%;
 
-.pull-profile {
-    float: right;
-    margin: -39px -102px;
+/*    float: right;
+    margin: -39px -102px; */
 }
 
 .navbar .nav > li > a {

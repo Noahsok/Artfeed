@@ -8,13 +8,9 @@
 {% else %}
 {{ block.super }}
 {% url "signup" as signup_url %}
-<p id="login-account">{% blocktrans with request.GET.next as next %}Don't have an account yet? <a id="join-community" href="{{ signup_url }}?next={{ next }}">Join The Community!</a>{% endblocktrans %}</p>
+<p id="login-account">{% blocktrans with request.GET.next as next %}Don't have an account yet? <br> <a id="join-community" href="{{ signup_url }}?next={{ next }}">Join The Community!</a>{% endblocktrans %}</p>
 {% url "mezzanine_password_reset" as password_reset_url %}
 {% url "profile_update" as profile_update_url %}
-{% blocktrans %}
-<div class="info-box">
-<p id="reset-password">Trouble loggin in?<a id="reset-pass" href="{{ password_reset_url }}?next={{ profile_update_url }}">Reset</a> your password!</p>{% endblocktrans %}</p>
-</div>
-{% endif %}
+{% blocktrans %}<p id="reset-password">Trouble loggin in? <br><a id="reset" href="{{ password_reset_url }}?next={{ profile_update_url }}">Reset</a><a id="password"> your password!</a>{% endblocktrans %}</p>{% endif %}
 
 {% endblock %}
