@@ -23,3 +23,40 @@ valid = map(str, settings.RATINGS_RANGE)
         super(Rating, self).save(*args, **kwargs)
 
 
+* Digital Ocean deploy reference:
+** /Deploying with Mezzanine youtube/(https://www.youtube.com/watch?v=snBBOv7F_k4)
+** How To Set Up Django with Postgres, Nginx, and Gunicorn on Ubuntu 18.04 (https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04)
+** Mezzanine Deploy docs (http://mezzanine.jupo.org/docs/deployment.html)
+
+
+
+* Digital Ocean with Mezzanine
+*** create droplet 
+*** set up fabric_production:
+**** in local_settings.py:
+**** Fabric_prod is development environment
+
+*** if not using Fabric read and refrence:
+"How To Set Up Django with Postgres, Nginx, and Gunicorn on Ubuntu 18.04"
+
+*** make sure server runs:
+python manage.py runserver
+
+*** log into our droplet via ssh:
+start with root user
+$ ssh root@(IP adress)
+password from Digital Ocean droplet email
+change password from root and put in new password
+
+** fab file
+    
+   fab file runs on python2.7 if you are running on python 3 you need to do other adjustments
+*** see  "How To Set Up Django with Postgres, Nginx, and Gunicorn on Ubuntu 18.0" article
+*** in article:
+    read: "Installing the Packages from the Ubuntu Repositories"
+*** 
+fab secure makes new user
+
+
+
+
