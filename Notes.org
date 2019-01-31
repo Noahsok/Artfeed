@@ -29,7 +29,6 @@ valid = map(str, settings.RATINGS_RANGE)
 ** Mezzanine Deploy docs (http://mezzanine.jupo.org/docs/deployment.html)
 
 
-
 * Digital Ocean with Mezzanine
 *** create droplet 
 *** set up fabric_production:
@@ -59,4 +58,4 @@ fab secure makes new user
 
 
 
-
+ 
