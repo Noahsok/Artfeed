@@ -52,29 +52,105 @@
         </header>
 
         <div class="container-fluid">
-            <div class="row flex-xl-nowrap">
-                <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <div class="row flex-sm-nowrap">
+                <div class="col-sm-2 bd-sidebar">
                     {% if not request.user.is_authenticated %}
                     {% include "accounts/includes/sidebar.html" %}
                     {% endif %}
 
                 </div>
-                <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                <div class="col col-sm-8 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
                 {% block main %}
                 
                     {% endblock %}
                 </div>
-                <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-                    <!-- <div class="alert alert-{{ message.tags }}" data-alert="alert"> -->
-                    <!-- <a class="close" href="#" onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }} -->
-                    <!-- </div> -->
-                </div>
-             </div>
+            </div>
+            <div class="col-sm-2 bd-sidebar">
+                <!-- <div class="alert alert-{{ message.tags }}" data-alert="alert"> -->
+                <!-- <a class="close" href="#" onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }} -->
+                <!-- </div> -->
+            </div>
+        </div>
         </div>
         
 
-        <footer>
+        
+        <!-- Footer -->
+        <footer class="footer">
+
+            <!-- Footer Links -->
+            <nav class="grid wrapper col row_960">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mt-md-0 mt-3">
+
+                        <!-- Content -->
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3 company-list">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase">company</h6>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#!">Guidlines</a>
+                            </li>
+                            <li>
+                                <a href="#!">Help/FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#!">Privacy Policy</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase"></h6>
+
+                        <ul class="list-unstyled">
+                            <li>
+                            </li>
+                            <li>
+                            </li>
+                            <li>
+                            </li>
+                            <li>
+                            </li>
+                        </ul>
+
+                    </div>
+                    
+                    <!-- Copyright -->
+                    <div class="col-md-3 mb-md-0 mb-3 footer-copyright">© artfeed 2019. All rights reserved.
+                    <ul>
+                        <li class="grid row">
+                            <a href="https://www.instagram.com/afeedcol" target="_blank" class="social-icon grid row center" onclick="ga(&quot;send&quot;,&quot;event&quot;,&quot;Instagram Logo&quot;,&quot;click&quot;,&quot;Marketing Site – Footer Logo : homepage&quot;)"><img src="/static/img/icons8-instagram.svg"></a>
+                        </li>
+                    </ul>
+                    </div>
+                    <!-- Copyright -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+            
+
         </footer>
+        <!-- Footer -->
 
         {% include "includes/footer_scripts.html" %}
 

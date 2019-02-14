@@ -1,3 +1,7 @@
+body {
+    background-color: #e1e1e12e !important;
+}
+
 .col-12 {
     width: 1200px !important;
     float: none !important;
@@ -6,7 +10,7 @@
 }
 
 .container-fluid {
-    padding: 6em;
+    padding: 9em;
 }
 
 
@@ -21,9 +25,6 @@
 
 
 .nav-tabs {
-    border-top: 2px solid #bbd5cf !important;
-    border-right: 2px solid #bbd5cf !important;
-    border-left: 2px solid #bbd5cf !important;
 }
 
 .nav {
@@ -36,12 +37,16 @@
 }
 
 .forum-sidebar_join-promt {
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 14px;
     border: 2px solid #9ABBB3;
     border-radius: 3px;
     font-family: damascus;
     font-size: 16px;
+}
+
+.forum-sidebar_join-promt:hover {
+    box-shadow: 0 4px 24px -2px #b8b8b8;
 }
 
 a.brand {
@@ -80,7 +85,12 @@ a.brand {
     font-family: 'Space Mono', regular;
     margin-top: 1.5%;
     margin-left: -2%;
-    margin-right: 2%;
+    border: 1px solid #99bbb3 !important;
+}
+
+.forum-list_threads-nav:hover {
+    box-shadow: 0 4px 24px -2px #b8b8b8;
+    border: 1px solid #99bbb3 !important;
 }
 
 .forum-list_filters-wrapper {
@@ -110,6 +120,7 @@ a.brand {
     position: fixed !important;
     z-index: 1071 !important;
     background-color: #fff;
+    box-shadow: 0 4px 24px -2px #b8b8b8;
 }
 
 
@@ -150,6 +161,10 @@ a.btn {
     font-size:16.5;
     border: 1.5px solid #A0EFDC !important;
 
+}
+
+a.btn:hover {
+    background-color: #d3e1de !important;
 }
 
 input#post-btn {
@@ -261,19 +276,22 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
 
 /* Link listing, details */
 .link-item, .comment-item {
-    margin-top: 11.5px;
-    margin-left: -2% !important;
-    border: 2px solid #bbd5cf;
-    width: 54.9em;
-    padding: 15px 0;
+    background: #bbd5cf5c;
+    margin-top: 2rem;
 }
+
+.link-item:hover {
+    box-shadow: 0 4px 24px -2px #b8b8b8; 
+}
+
 .link-view .rating i {float:left; margin:8px 0 0 -4px;}
 .link-view .description {margin:20px 0;}
 .link-meta .rating {margin:0 5px 0 0 !important;}
 
 fieldset {
-    padding: 0em 14em !important;
-    margin-top: 0em !important;
+    padding: 3em 19em !important;
+    padding-left: 12em !important;
+    margin-top: -1em !important;
     border: 0 !important;
 }
 
@@ -283,7 +301,7 @@ fieldset {
     font-family: 'Space Mono', regular !important;
     font-size: 12px;
     margin-left: 48em;
-    margin-top: -27em;
+    margin-top: -4em;
 
 }
 
@@ -328,7 +346,7 @@ legend {
     display: block;
     width: 30%;
     padding: 0.3em;
-    margin-bottom: 1em;
+    margin-bottom: -1em !important;
     font-size: 21px;
     font-family: 'Mono Space',regular !important;
     ext-align: -webkit-center !important;
@@ -346,15 +364,17 @@ legend {
 
 .btn.btn-primary {
     border: 2px solid #a0efdc;
-    background-color: #fff;
+    background-color: #f9f9f9 !important;
     font-family: monospace;
     color: #000000;
+}
 
-
+.btn-primary:hover {
+    border-color: #99bbb3 !important; 
 }
 
 .btn.btn-primary:hover {
-    background-color: #a0efdc;
+    background-color: #d3e1de !important;
 }
 
 /* button for submit page */
@@ -408,7 +428,8 @@ input[type="date"],input[type="month"], input[type="time"],
 input[type="week"], input[type="number"], input[type="email"],
 input[type="url"], input[type="search"],input[type="tel"],
 input[type="color"], .uneditable-input {
-    border: 2px solid #9df0dc;
+    width: 41em !important;
+    border: 2px solid #99bbb375 !important;
     font-family: "Mono Space";
     margin-left: 0em;
 }
@@ -423,9 +444,6 @@ input[type="color"]:focus, .uneditable-input:focus {
 }
 
 .form-actions {
-    background-color: #ffffff !important;
-    border-top: none !important;
-    padding: 3em 16em 0em;
 }
 
 
@@ -447,6 +465,26 @@ input[type="color"]:focus, .uneditable-input:focus {
     margin-right: 0%;
 }
 
+/* footer */
 
+.footer {
+    padding: 25px 50px;
+    background-color: #d3e1de;
+}
 
+.company-list {
+    color: #000;
+}
 
+.list-unstyled {
+    color: #000;
+}
+
+.footer-copyright {
+    color: #000;
+}
+insta-icon {
+    
+}
+
+/* footer */
