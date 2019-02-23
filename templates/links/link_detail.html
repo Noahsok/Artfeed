@@ -5,16 +5,22 @@
 {% block meta_description %}{% metablock %}{{ object.description }}{% endmetablock %}{% endblock %}
 {% block meta_title %}{{ object.title }}{% endblock %}
 {% block title %}
-<a href="{{ object.url }}">{{ object.title }}</a>
-<span class="domain">({{ object.domain }})</span>
-<br />
-<span>{{ object.content |safe}}</span>
+
 {% endblock %}
 
 
 {% block main %}
+
+<div class="title-comment-page">
+    {% if not profile_user %}{% rating_for link %}{% endif %}
+    {% if link.rating_sum < 0 %} link-negative{% endif %}"
+        <h2>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            <span class="domain">({{ link.domain }})</span>
+        </h2>
+</div>
+
 <div class="link-view">
-    <p class="description">{{ object.description }}</p>
     <div class="link-meta">
         {% rating_for object %}
         by <a href="{% url "profile" object.user.username %}">{{ object.user|get_profile }}</a>

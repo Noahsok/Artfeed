@@ -1,8 +1,25 @@
+
 {% load i18n mezzanine_tags comment_tags %}
+
+<div id="new-comment">
+    <form method="post" id="comment" action="{{ comment_url }}#comment">
+        <div class="post-comment">
+            <h4>{% trans "New Comment" %}</h4>
+        </div>
+        {% if not request.POST.replied_to %}
+        {% fields_for posted_comment_form %}
+        {% else %}
+        {% fields_for unposted_comment_form %}
+        {% endif %}
+        <div class="form-actions">
+            <input class="btn btn-primary btn-lg" type="submit" value="{% trans "Post Comment" %}">
+        </div>
+    </form>
+</div>
+
 <div id="comments">
-    <h3>{% trans "Comments" %}</h3>
+    <h2>{% trans "Comments" %}</h2>
     {% if settings.COMMENTS_DISQUS_SHORTNAME %}
-    {% include "generic/includes/disqus_comments.html" %}
     {% else %}
     <script>
      $(function() {
@@ -12,18 +29,8 @@
          });
      });
     </script>
+    {% endif %}
+
     <style>.input_id_honeypot {display:none !important;}</style>
     {% comment_thread object_for_comments %}
-    <h3>{% trans "New Comment" %}</h3>
-    <form method="post" id="comment" action="{{ comment_url }}#comment">
-        {% if not request.POST.replied_to %}
-        {% fields_for posted_comment_form %}
-        {% else %}
-        {% fields_for unposted_comment_form %}
-        {% endif %}
-        <div class="form-actions">
-            <input class="btn btn-primary btn-lg" type="submit" value="{% trans "Comment" %}">
-        </div>
-    </form>
-    {% endif %}
 </div>

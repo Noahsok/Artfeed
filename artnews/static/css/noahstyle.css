@@ -42,8 +42,8 @@ body {
     border: 2px solid #9ABBB3;
     box-shadow: 0 4px 24px -2px #b8b8b8 !important;
     border-radius: 3px;
-    font-family: damascus;
-    font-size: 16px;
+    font-family: monospace;
+    font-size: 14px;
 }
 
 .forum-sidebar_join-promt:hover {
@@ -84,7 +84,7 @@ a.brand {
 .forum-list_threads-nav {
     font-size: 17px;
     font-family: 'Space Mono', regular;
-    margin-top: 1.5%;
+    margin-top: -1.5%;
     margin-left: -2%;
     border: 1px solid #99bbb3 !important;
 }
@@ -246,7 +246,6 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
 .svg-inline--fa.fa-w-10 {
     font-size: 2em;
     color: #010101;
-    margin-right: -1.5em;
     margin-top: .5rem;
 }
 
@@ -372,7 +371,7 @@ legend {
 
 /* button for submit page */
 .btn.btn-warning {
-    background-color: #5461ff;
+    background-color: #d3e1de;
 }
 
 .btn.btn-warning:hover {
@@ -411,9 +410,6 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
     box-shadow: 0 0 20px #99bbb3;
 }
 
-.form-group, .input_id_username {
-    margin-left: 7em;
-}
 
 textarea, input[type="text"], input[type="password"],
 input[type="datetime"], input[type="datetime-local"],
@@ -439,13 +435,6 @@ input[type="color"]:focus, .uneditable-input:focus {
 .form-actions {
 }
 
-
-/* tinymce panel  */
-.mce-panel {
-    border: 1px solid #5461ff !important;
-    background-color: #fff !important;
-    background-image: linear-gradient(to bottom,#ffffff,#fff)!important;
-}
 
 .pull-left-submit {
     float: none;
@@ -481,3 +470,34 @@ insta-icon {
 }
 
 /* footer */
+
+/* comment stream */
+
+.title-comment-page {
+    background: #bbd5cf5c;
+    margin-top: 2rem;
+    padding: 2em;
+    padding-left: 3.5rem !important;
+    box-shadow: 0 4px 24px -2px #b8b8b8;
+}
+
+#new-comment {
+    background: #e3ecea;
+    padding: 2em;
+    margin-top: 5em;
+    box-shadow: 0 4px 24px -2px #b8b8b8;
+}
+
+.post-comment {
+    
+}
+
+#comments {
+    border-left: 3px solid #e3ecea;
+    padding: 2em;
+    margin-top: 5em;
+}
+
+#comment {
+    margin-left: 5em;
+}
