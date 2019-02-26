@@ -19,7 +19,7 @@ urlpatterns = [
         name="home"),
 
     url("^newest/$",
-        LinkList.as_view(), {"by_score": True},
+        LinkList.as_view(), {"by_score": False},
         name="link_list_latest"),
 
     url("^", include("drum.links.urls")),
@@ -27,7 +27,7 @@ urlpatterns = [
     url("^", include("mezzanine.urls")),
 
     url("^comments/$",
-        CommentList.as_view(), {"by_score": True},
+        CommentList.as_view(), {"by_score": False},
         name="comment_list_latest"),
 
     url("^best/$",

@@ -87,6 +87,8 @@ a.brand {
     margin-top: -1.5%;
     margin-left: -2%;
     border: 1px solid #99bbb3 !important;
+    background: #fff;
+    box-shadow: 0 4px 24px -2px #b8b8b8;
 }
 
 .forum-list_threads-nav:hover {
@@ -200,17 +202,29 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
 }
 
 /* Rating widget with up/down arrows */
-.rating {float:left; margin-top:-15px;}
-.rating form {display:none !important;}
+.rating {
+    float:left;
+    margin-top:-15px;
+}
+
+.rating form {
+    display:none !important;
+}
+
 .rating i {
     display:block !important;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
-.arrows {float:left; margin-top:-5px;}
-.score, .arrows {opacity: none;}
-.arrows a:hover i {background-color:#1abc9c; background-image:url("../img/glyphicons-halflings-white.png");}
+.arrows {
+    float:left;
+    margin-top:-5px;
+}
+
+.score, .arrows {
+    opacity: 6px !important;
+}
 
 /* Link items in a list */
 .link-item h2 {
@@ -240,7 +254,6 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
 }
 
 #arrow-up {
-    color: #A0EFDC;
 }
 
 .svg-inline--fa.fa-w-10 {
@@ -282,9 +295,6 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
 
 fieldset {
     padding: 3em 19em !important;
-    padding-left: 12em !important;
-    margin-top: -1em !important;
-    border: 0 !important;
 }
 
 /* login css */
@@ -343,7 +353,6 @@ legend {
     font-family: 'Mono Space',regular !important;
     ext-align: -webkit-center !important;
     border: 1px solid #99bbb3;
-    margin-left: 5.0em !important;
     text-align: -webkit-center;
 }
 
@@ -417,7 +426,7 @@ input[type="date"],input[type="month"], input[type="time"],
 input[type="week"], input[type="number"], input[type="email"],
 input[type="url"], input[type="search"],input[type="tel"],
 input[type="color"], .uneditable-input {
-    width: 41em !important;
+    width: 100%;
     border: 2px solid #99bbb375 !important;
     font-family: "Mono Space";
     margin-left: 0em;
