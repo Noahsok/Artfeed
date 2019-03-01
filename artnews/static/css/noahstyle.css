@@ -222,8 +222,8 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
     margin-top:-5px;
 }
 
-.score, .arrows {
-    opacity: 6px !important;
+.score {
+    display:inline-block
 }
 
 /* Link items in a list */
@@ -253,7 +253,11 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
     border-radius: 3px;
 }
 
-#arrow-up {
+
+#inc {
+    border: none !important;
+    background: none !important;
+    font-size: 18px;
 }
 
 .svg-inline--fa.fa-w-10 {

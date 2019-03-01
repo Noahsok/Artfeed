@@ -27,8 +27,8 @@
 
         {% for link in object_list %}
         
-        <div class="pl-md-0">
-<div class="link-item clearfix {% cycle 'row1' 'row2' %}">
+    <div class="pl-md-0">
+        <div class="link-item py-sm-3 pl-sm-4 clearfix {% cycle 'row1' 'row2' %}">
     {% if not profile_user %}{% rating_for link %}{% endif %}
     <div class="link-detail{% if link.rating_sum < 0 %} link-negative{% endif %}">
         <h2>
