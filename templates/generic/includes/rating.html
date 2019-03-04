@@ -6,16 +6,17 @@
         {% fields_for rating_form %}
     </form>
 
-    <span class="arrows">
+    <span class="arrows col-8 .col-sm-3 mt-4">
         <a href="#"><i class="fas fa-angle-up"></i></a>
         <!-- <a href="#"><i class="icon icon-arrow-down"></i></a> -->
+
+        <span class="score">
+            {% with rating_obj.comments_count|default:0 as comments_count %}
+            <!--{{ rating_sum|add:comments_count }}-->
+            {{ rating_sum }}
+            {% endwith %}
+        </span>
     </span>
 
-    <span class="score">
-        {% with rating_obj.comments_count|default:0 as comments_count %}
-        <!--{{ rating_sum|add:comments_count }}-->
-        {{ rating_sum }}
-        {% endwith %}
-    </span>
 
 </div>

@@ -232,25 +232,15 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
     margin:0;
     font-size: 17px;
 }
-.link-item .rating, .link-detail {float:left;}
+.link-item .rating, .link-detail {
+    float:left;
+}
+
 .link-item .rating {
-    background-color: none;
-    padding: 10px;
-    margin: -6px -13px 0 18px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
     width:75px;
     text-align:center;
 }
 .link-item .arrows {
-    margin: 14px 10px 0 -11px;
-    background-color: none;
-    padding: 7px;
-    display: block;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
 }
 
 
@@ -268,7 +258,6 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
 
 .link-item .score {
   font-size: 20px;
-  line-height: 85px;
 }
 
 .link-detail {
