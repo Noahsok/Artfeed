@@ -12,8 +12,8 @@ from django.views.generic import ListView, CreateView, DetailView, TemplateView
 
 from mezzanine.accounts import get_profile_model
 from mezzanine.conf import settings
-from mezzanine.generic.models import ThreadedComment, Keyword
-from mezzanine.utils.views import paginate
+from mezzanine.generic.models import ThreadedComment
+from mezzanine.utils.views import paginate, rating
 
 from drum.links.forms import LinkForm
 from drum.links.models import Link

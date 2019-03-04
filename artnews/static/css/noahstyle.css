@@ -269,7 +269,6 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
 .link-item .score {
   font-size: 20px;
   line-height: 85px;
-  margin-left: -4.2em;
 }
 
 .link-detail {
