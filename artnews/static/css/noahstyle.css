@@ -228,9 +228,9 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
 
 /* Link items in a list */
 .link-item h2 {
-    line-height:30px;
+    line-height:23px;
     margin:0;
-    font-size: 17px;
+    font-size: 14px;
 }
 .link-item .rating, .link-detail {
     float:left;
