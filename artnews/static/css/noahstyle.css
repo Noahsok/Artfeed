@@ -10,7 +10,8 @@ body {
 }
 
 .container-fluid {
-    padding: 9em;
+    padding-top: 8em;
+    padding-bottom: 2em;
 }
 
 
@@ -277,7 +278,7 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
     margin-top: 2rem;
 }
 
-.link-item:hover {
+.link-item {
     box-shadow: 0 4px 24px -2px #b8b8b8; 
 }
 
