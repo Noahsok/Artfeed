@@ -13,23 +13,23 @@
 
 <div class="title-comment-page">
     {% if not profile_user %}{% rating_for link %}{% endif %}
-    {% if link.rating_sum < 0 %} link-negative{% endif %}"
-        <h2>
+    {% if link.rating_sum < 0 %} link-negative{% endif %}
+        <h4>
             <a href="{{ link.url }}">{{ link.title }}</a>
             <span class="domain">({{ link.domain }})</span>
-        </h2>
+        </h4>
+        <div class="link-meta">
+            <a href="{% url "profile" object.user.username %}">{{ object.user|get_profile }}</a>
+            {{ object.publish_date|short_timesince }} ago
+            {% keywords_for link as tags %}
+            {% for tag in tags %}
+            | <a href="{% url "link_list_tag" tag.slug %}">{{ tag }}</a>
+            {% endfor %}
+        </div>
 </div>
 
 <div class="link-view">
-    <div class="link-meta">
-        {% rating_for object %}
-        by <a href="{% url "profile" object.user.username %}">{{ object.user|get_profile }}</a>
-        {{ object.publish_date|short_timesince }} ago
-        {% keywords_for link as tags %}
-        {% for tag in tags %}
-        | <a href="{% url "link_list_tag" tag.slug %}">{{ tag }}</a>
-        {% endfor %}
-    </div>
+    
     {% order_comments_by_score_for object %}
     {% comments_for object %}
 </div>
