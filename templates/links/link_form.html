@@ -9,7 +9,7 @@
 {% block main %}
 {% errors_for form %}
 <form method="post">
-    <fieldset>{% fields_for form %}</fieldset>
+    <fieldset class="form-group">{% fields_for form %}</fieldset>
     <input class="btn btn-primary btn-lg pull-right" class="submit-post-btn" type="submit" value="Submit Post">
 </form>
 
