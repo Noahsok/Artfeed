@@ -10,7 +10,7 @@ body {
 }
 
 .container-fluid {
-    padding-top: 8em;
+    padding-top: 6em;
     padding-bottom: 2em;
 }
 
@@ -176,7 +176,7 @@ input#post-btn {
 }
 
 #profile-url-btn {
-    margin-right: 4em;
+    margin-right: 1em;
 }
 
 .btn:hover, .btn:focus  {
@@ -503,4 +503,19 @@ insta-icon {
 
 #comment {
     margin-left: 5em;
+}
+
+/* left side search/tags */
+
+.left-sidebar {
+    border-right: 3px solid #e3eceacc;
+}
+
+
+/* right sidebar */
+
+.right-sidebar {
+    border-left: 3px solid #e3eceacc;
+    border-bottom: 3px solid #e3eceacc;
+    height: 7em;
 }

@@ -4,17 +4,19 @@
 <div class="pull-right">
     {% if request.user.is_authenticated %}
     <a id="logout-btn" href="{% url "logout" %}" class="btn" type="logout-button"?next={{ request.path }}"
-      >{% trans "Log out" %}</a>
+    >{% trans "Log out" %}</a>
 
-        {% url "profile" request.user.username as profile_url %}
+    {% url "profile" request.user.username as profile_url %}
         {% if not profile_url %}{% url "profile_update" as profile_url %}{% endif %}
-        <a id="profile-url-btn" href="{{ profile_url }}" class="btn" type="profile-button">{{ request.user|get_profile }}</a>
+    <a id="profile-url-btn" href="{{ profile_url }}" class="btn" type="profile-button">{{ request.user|get_profile }}</a>
+    <a id="post-btn" href="{% url "link_create" %}" class="btn" type="new-post"?next={{ request.path }}">{%trans "New Post" %}</a>
+
 
     {% else %}
     <a id="login-btn" href="{% url "login" %}" class="btn" type="login-button"?next="{{ request.path }}"
       >{% trans "Log in" %}</a>
-    <a id="signup-btn" href="{% url "signup" %}" class="btn" type="signup-button"?next={{ request.path }}"
-      >{% trans "Sign up" %}</a>
+    <a id="signup-btn" href="{% url "signup" %}" class="btn" type="signup-button"?next={{ request.path }}">{% trans "Sign up" %}</a>
+    <a id="post-btn" href="{% url "link_create" %}" class="btn" type="new-post"?next={{ request.path }}">{%trans "New Post" %}</a>
 
 </div>
 {% endif %}
