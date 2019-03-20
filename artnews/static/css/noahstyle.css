@@ -504,3 +504,24 @@ insta-icon {
 #comment {
     margin-left: 5em;
 }
+
+/* pagination */
+
+.pagination {
+    
+}
+.left-pagination a {
+    color: #aad3ca;
+}
+ 
+.left-pagination a:hover {
+    color: black;
+}
+
+.right-pagination a { 
+    color: #aad3ca;
+}
+
+.right-pagination a:hover {
+    color: black;
+}
