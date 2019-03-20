@@ -7,6 +7,21 @@
 
 {% block main %}
 
+<!-- <div class="forum-list forum-sidebar_join-promt">  -->
+<div class="col">
+    <nav class=" nav-tabs forum-list_threads-nav">
+        <div class="forum-list_filters-wrapper">
+            <div id="filters1" class=" col forum-filters">
+                <a id="filter-top" href="/" class="forum-filters_filter">Top</a>
+                {% if request.path == link_list_latest %} class="active"{% endif %}<a id="filter-newest" href="{{ link_list_lastest }}" class="forum-filters_filter">Newest</a>
+                <a id="filter-week" href="/" class="forum-filters_filter">Week</a>
+                <a id="filter-Month" href="/" class="forum-filters_filter">Month</a>
+                <a id="post-btn" href="{% url "link_create" %}" class="btn offset-6" type="new-post">New Post</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
 
 <div id="forum-nav">
 
