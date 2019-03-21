@@ -82,6 +82,8 @@ a.brand {
     align-self: stretch;
 }
 
+/* navbar for new post, search tabs */
+
 .forum-list_threads-nav {
     font-size: 17px;
     font-family: 'Space Mono', regular;
@@ -97,6 +99,11 @@ a.brand {
     border: 1px solid #99bbb3 !important;
 }
 
+#newest {
+    color: black;
+    text-decoration-color: #9df0dc;
+}
+
 .forum-list_filters-wrapper {
     display: flex;
     overflow: hidden;
@@ -106,8 +113,8 @@ a.brand {
 }
 
 #filter-top {
-    text-decoration: none;
     color: #000000;
+    text-decoration-color: #9df0dc;
     margin-top: 5%;
 }
 
