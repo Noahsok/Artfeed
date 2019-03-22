@@ -207,7 +207,7 @@ h1, .link-item, .comment-item, .comment-links, #comments h3 {
 /* Rating widget with up/down arrows */
 .rating {
     float:left;
-    margin-top:-15px;
+    margin-top: -2.5rem;
 }
 
 .rating form {
@@ -493,8 +493,8 @@ insta-icon {
     box-shadow: 0 4px 24px -2px #b8b8b8;
 }
 
-.post-comment {
-    
+.post-comment h2{
+   font-size: 1rem
 }
 
 #comments {

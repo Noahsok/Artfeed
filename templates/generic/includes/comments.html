@@ -4,7 +4,6 @@
 <div id="new-comment">
     <form method="post" id="comment" action="{{ comment_url }}#comment">
         <div class="post-comment">
-            <h2>{% trans "New Comment" %}</h2>
         </div>
         {% if not request.POST.replied_to %}
         {% fields_for posted_comment_form %}
