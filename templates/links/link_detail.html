@@ -14,10 +14,12 @@
 <div class="title-comment-page">
     {% if not profile_user %}{% rating_for link %}{% endif %}
     {% if link.rating_sum < 0 %} link-negative{% endif %}
-        <h4>
+    <div class="click-link">
+        <h2>
             <a href="{{ link.url }}">{{ link.title }}</a>
             <span class="domain">({{ link.domain }})</span>
-        </h4>
+        </h2>
+    </div>
         <div class="link-meta">
             <a href="{% url "profile" object.user.username %}">{{ object.user|get_profile }}</a>
             {{ object.publish_date|short_timesince }} ago

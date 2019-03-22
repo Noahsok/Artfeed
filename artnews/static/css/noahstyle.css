@@ -507,6 +507,14 @@ insta-icon {
     margin-left: 5em;
 }
 
+/* comment page to click link */
+
+.click-link h2 {
+    line-height: 23px;
+    margin: 0;
+    font-size: 14px;
+}
+
 /* pagination */
 
 .pagination {
