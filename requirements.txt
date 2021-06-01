@@ -29,5 +29,5 @@ requests-oauthlib==1.0.0
 six==1.11.0
 sphinx-me==0.3
 tzlocal==1.5.1
-urllib3==1.24.1
+urllib3==1.26.5
 webencodings==0.5.1
